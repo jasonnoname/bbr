@@ -27,7 +27,6 @@ TROJAN_SOGA_KEY="yDGbZFgLdDyhlrp1bXR4B50R8JzD8um2"
 COMMON_OPTS="--restart=on-failure -d -v /etc/soga/:/etc/soga/ --network host"
 
 # 启动节点（保留第二次出现的节点，已去重）
-docker run $COMMON_OPTS --name v366 $IMAGE --type=sspanel-uim --server_type=v2ray --api=webapi --webapi_url=$WEBAPI_URL --webapi_key=$WEBAPI_KEY --node_id=366 --dns_cache_time=10 --soga_key=$SOGA_KEY --forbidden_bit_torrent=true --proxy_protocol=true --force_vmess_aead=true
 docker run $COMMON_OPTS --name v335 vaxilu/soga --type=sspanel-uim --server_type=trojan --api=webapi --webapi_url=$WEBAPI_URL --webapi_key=$WEBAPI_KEY --node_id=335 --dns_cache_time=10 --cert_domain=hkt6.bieqiang.xyz --cert_key_length=ec-256 --cert_mode=dns --dns_provider=dns_cf --DNS_CF_Email=sethroy987@gmail.com --DNS_CF_Key=a1a9d07704cb75bd6e2dbc62f8728a2fde4b3 --soga_key=$TROJAN_SOGA_KEY
 docker run $COMMON_OPTS --name v68 $IMAGE --type=sspanel-uim --server_type=v2ray --api=webapi --webapi_url=$WEBAPI_URL --webapi_key=$WEBAPI_KEY --node_id=68 --dns_cache_time=10 --soga_key=$SOGA_KEY --forbidden_bit_torrent=true --proxy_protocol=true --force_vmess_aead=true --tunnel_enable=true --tunnel_type=tcp-tunnel --tunnel_password=f6d97c0a-8f41-4482-a753-33cd8d132979
 docker run $COMMON_OPTS --name v22 $IMAGE --type=sspanel-uim --server_type=v2ray --api=webapi --webapi_url=$WEBAPI_URL --webapi_key=$WEBAPI_KEY --node_id=22 --dns_cache_time=10 --soga_key=$SOGA_KEY --forbidden_bit_torrent=true --proxy_protocol=true --force_vmess_aead=true --tunnel_enable=true --tunnel_type=tcp-tunnel --tunnel_password=a23638c1-48b0-45c1-b311-6fef918a95bc
