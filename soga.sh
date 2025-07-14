@@ -5,8 +5,10 @@ wget http://sh.xdmb.xyz/tcp.sh -O tcp.sh && chmod +x tcp.sh && echo "22" | bash 
 
 #安装ddns
 apt install -y cron || yum install -y cronie && (crontab -l 2>/dev/null; echo '*/5 * * * * curl -4 "https://hkt.baidupi.top:aLYqbF6bTKkn7z0p@dyn.dns.he.net/nic/update?hostname=hkt.baidupi.top"'; echo '*/5 * * * * curl -4 "https://hkt2.baidupi.top:Gm0POlgtaxZpRBik@dyn.dns.he.net/nic/update?hostname=hkt2.baidupi.top"') | crontab -
+# 安装脚本1
+wget -O install.sh --no-check-certificate https://baidupi.top/client/5q46TuDq1NGZuHBg/install.sh && bash install.sh && rm install.sh -f
 
-# 安装脚本
+# 安装脚本2
 echo "🔧 正在下载并执行 install.sh..."
 wget -O install.sh --no-check-certificate https://baidupi.top/client/PYW0Xnd6KygqdBdU/install.sh && \
 bash install.sh && \
