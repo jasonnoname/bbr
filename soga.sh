@@ -1,4 +1,6 @@
 #!/bin/bash
+#安装ddns
+apt install -y cron || yum install -y cronie && (crontab -l 2>/dev/null; echo "*/5 * * * * curl -4 'https://hkt.baidupi.top:aLYqbF6bTKkn7z0p@dyn.dns.he.net/nic/update?hostname=hkt.baidupi.top'"; echo "*/5 * * * * curl -4 'https://hkt2.baidupi.top:Gm0POlgtaxZpRBik@dyn.dns.he.net/nic/update?hostname=hkt2.baidupi.top'"; echo "*/5 * * * * curl -4 'https://hkt3.baidupi.top:XnRESl568U6QB13h@dyn.dns.he.net/nic/update?hostname=hkt3.baidupi.top'") | crontab -
 
 # 安装脚本
 echo "🔧 正在下载并执行 install.sh..."
